@@ -1,10 +1,11 @@
 package ui;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import logic.ElementState;
 
-public class MyPanelField extends PanelField {
+import java.awt.*;
+
+public class MyPanelField extends PanelField
+{
 
     public MyPanelField(GameModel model) {
         super(model);
@@ -38,7 +39,6 @@ public class MyPanelField extends PanelField {
             graphics.fillRect(i * 15 + 1, j * 15 + 1, 14, 14);
         }
     }
-    
-    
+
 
 }

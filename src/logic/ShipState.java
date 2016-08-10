@@ -1,5 +1,6 @@
 package logic;
 
-public enum ShipState {
+public enum ShipState
+{
     WALL, INJURED, KILLED;
 }

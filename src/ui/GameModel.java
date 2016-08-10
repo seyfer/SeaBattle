@@ -1,31 +1,33 @@
 package ui;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import logic.Robot;
 import logic.ShipField;
 
-public class GameModel {
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class GameModel
+{
     private List<Subscriber> listeners = new ArrayList<Subscriber>();
     public ShipField myPlayerField;
     public ShipField enemyPlayerField;
     public Robot robot;
     public int currentPlayer;
-    
+
     public GameModel() {
         this.currentPlayer = 0;
         myPlayerField = new ShipField();
         enemyPlayerField = new ShipField();
         robot = new Robot(myPlayerField);
     }
-    
+
     public void startNewGame() {
         myPlayerField.putShip();
         enemyPlayerField.putShip();
         updateSubscribers();
     }
-    
+
     public void doShotByOpponent(int x, int y) {
         // If a player goes 
         if (currentPlayer == 0) {
@@ -37,7 +39,7 @@ public class GameModel {
 
         // if enemy goes
         if (currentPlayer == 1) {
-            while (robot.move());
+            while (robot.move()) ;
             currentPlayer = 0;
         }
         updateSubscribers();
@@ -57,7 +59,7 @@ public class GameModel {
     public void unRegister(Subscriber subscriber) {
         listeners.remove(subscriber);
     }
-    
+
     /**
      * data representation repaint
      */

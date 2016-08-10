@@ -6,7 +6,8 @@ import java.util.Random;
 /**
  * Artificial intelligence
  */
-public class Robot {
+public class Robot
+{
 
     public ShipField field;
     public int x, y;

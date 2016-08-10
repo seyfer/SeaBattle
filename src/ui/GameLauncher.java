@@ -1,6 +1,7 @@
 package ui;
 
-public class GameLauncher {
+public class GameLauncher
+{
 
     /**
      * @param args the command line arguments

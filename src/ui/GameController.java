@@ -1,14 +1,13 @@
 package ui;
 
-import java.awt.Color;
-import java.awt.Font;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
 
-public class GameController implements ActionListener {
+public class GameController implements ActionListener
+{
 
     private static final String gameRules = "В игру \"морской бой\" играют два человека,\n "
             + "которые по очереди называют координаты\n кораблей на карте противника.\n "
@@ -36,7 +35,7 @@ public class GameController implements ActionListener {
 
             JTextArea textArea = new JTextArea(gameRules);
             textArea.setBackground(Color.CYAN);
-            
+
             Font font = new Font("Times New Roman", 0, 40);
             textArea.setFont(font);
             rules.getContentPane().add(textArea);
@@ -45,7 +44,7 @@ public class GameController implements ActionListener {
             System.exit(0);
         }
     }
-    
+
     public void mousePressed(MouseEvent arg0) {
         int x = arg0.getX() / 15;
         int y = arg0.getY() / 15;

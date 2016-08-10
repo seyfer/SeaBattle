@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Ship {
+public class Ship
+{
     public int x, y;
     private int dx, dy;
     public int size;
@@ -12,7 +13,7 @@ public class Ship {
     public ShipState state;
     public ShipField field;
     public List<Element> elements;
-    
+
     public Ship(ShipField field, int size) {
         this.size = size;
         this.health = size;
@@ -26,7 +27,7 @@ public class Ship {
         this.elements = new ArrayList<Element>();
         this.setShip();
     }
-    
+
     private void placeRandomly() {
         Random rand = new Random();
         this.x = rand.nextInt(10);

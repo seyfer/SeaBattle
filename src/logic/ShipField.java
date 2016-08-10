@@ -3,7 +3,8 @@ package logic;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShipField {
+public class ShipField
+{
 
     public Element[][] elements;
     public List<Ship> ships;

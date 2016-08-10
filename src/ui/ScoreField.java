@@ -1,15 +1,13 @@
 package ui;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import logic.Ship;
 import logic.ShipState;
 
-public class ScoreField extends JPanel implements Subscriber {
+import javax.swing.*;
+import java.awt.*;
+
+public class ScoreField extends JPanel implements Subscriber
+{
 
     private static final String congratulation = "You are winner!!!";
     private GameModel model;
@@ -31,7 +29,7 @@ public class ScoreField extends JPanel implements Subscriber {
         ships = 0;
         for (Ship ship : model.enemyPlayerField.ships) {
             if (ship.state != ShipState.KILLED) {
-                elem[ship.size -1] ++;
+                elem[ship.size - 1]++;
                 ships++;
             }
         }
@@ -53,20 +51,20 @@ public class ScoreField extends JPanel implements Subscriber {
     }
 
     private void congratTheWinner() {
-            JFrame frame = new JFrame();
-            frame.setVisible(true);
-            frame.setTitle("Congratulations!");
-            frame.setResizable(false);
-            frame.setBounds(1000, 300, 750, 150);
+        JFrame frame = new JFrame();
+        frame.setVisible(true);
+        frame.setTitle("Congratulations!");
+        frame.setResizable(false);
+        frame.setBounds(1000, 300, 750, 150);
 
-            JTextArea textArea = new JTextArea(congratulation);
-            textArea.setBackground(Color.magenta);
+        JTextArea textArea = new JTextArea(congratulation);
+        textArea.setBackground(Color.magenta);
 
-            Font font = new Font("Times New Roman", 0, 100);
-            textArea.setFont(font);
-            frame.getContentPane().add(textArea);
+        Font font = new Font("Times New Roman", 0, 100);
+        textArea.setFont(font);
+        frame.getContentPane().add(textArea);
     }
-    
+
     @Override
     public void update() {
         this.repaint();

@@ -1,11 +1,12 @@
 package ui;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import logic.ElementState;
 
-public class EnemyPanelField extends PanelField {
-    
+import java.awt.*;
+
+public class EnemyPanelField extends PanelField
+{
+
     public EnemyPanelField(GameModel model) {
         super(model);
     }
@@ -28,7 +29,7 @@ public class EnemyPanelField extends PanelField {
 
         return Color.blue;
     }
-    
+
     @Override
     protected void paintElement(Graphics graphics, int i, int j) {
         ElementState state = model.enemyPlayerField.getElement(i, j);
@@ -39,5 +40,5 @@ public class EnemyPanelField extends PanelField {
             graphics.fillRect(i * 15 + 1, j * 15 + 1, 14, 14);
         }
     }
-    
+
 }

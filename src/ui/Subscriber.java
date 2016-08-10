@@ -1,5 +1,6 @@
 package ui;
 
-public interface Subscriber {
+public interface Subscriber
+{
     void update();
 }

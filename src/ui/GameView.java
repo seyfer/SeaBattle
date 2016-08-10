@@ -1,14 +1,12 @@
 package ui;
 
-import java.awt.Color;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 
-public class GameView extends JFrame {
+public class GameView extends JFrame
+{
 
     private GameModel model;
     private GameController controller;
@@ -42,7 +40,8 @@ public class GameView extends JFrame {
         newGame.addActionListener(controller);
         exit.addActionListener(controller);
 
-        enemyPlayerPanel.addMouseListener(new MouseAdapter() {
+        enemyPlayerPanel.addMouseListener(new MouseAdapter()
+        {
             @Override
             public void mousePressed(MouseEvent arg) {
                 controller.mousePressed(arg);
@@ -86,7 +85,7 @@ public class GameView extends JFrame {
 
         scorePanel = new ScoreField(model);
         scorePanel.setBounds(370, 31, 90, 151);
-        scorePanel.setBackground(new Color(225,225,255));
+        scorePanel.setBackground(new Color(225, 225, 255));
         this.getContentPane().add(scorePanel);
     }
 }

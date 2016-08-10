@@ -1,6 +1,7 @@
 package logic;
 
-public class TrigerShipCheck extends TrigerShip {
+public class TrigerShipCheck extends TrigerShip
+{
 
     public TrigerShipCheck(Ship ship) {
         super(ship);
